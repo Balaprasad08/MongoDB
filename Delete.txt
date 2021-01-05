@@ -1,0 +1,11 @@
+// Deleting items form MongoDB
+db.items.deleteOne({Price:16999})
+// deleteOne will delete the matching document entry
+//  and will delete the first entry in case of multi document match
+db.items.find({Price:16999})
+
+// deleteMany will delete the matching document entry
+//  and will delete the all document with Same entry in case of multi document match
+db.items.deleteMany({Price:16999})
+
+// Updating data from the Mongo Database

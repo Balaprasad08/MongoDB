@@ -1,0 +1,9 @@
+// Updating data from the Mongo Database
+
+db.items.updateOne({Name:'OPPO A15s'},{$set:{Price:5}})
+db.items.insertMany([{Name:'Samsung Galaxy M31',Price:16499,Rating:5.0},{Name:'Samsung Galaxy M31',Price:16499,Rating:5.0},
+{Name:'Samsung Galaxy M31',Price:16499,Rating:5.0},{Name:'Samsung Galaxy M31',Price:16499,Rating:5.0},
+{Name:'Samsung Galaxy M31',Price:16499,Rating:5.0},{Name:'Samsung Galaxy M31',Price:16499,Rating:5.0}])
+db.items.updateMany({Name:'Samsung Galaxy M31'},{$set:{Price:19}})
+db.items.updateMany({Name:'Samsung Galaxy M31'},{$set:{Rating:2.1}})
+db.items.updateMany({Name:'Samsung Galaxy M31'},{$set:{Rating:4.5,Price:16999}})

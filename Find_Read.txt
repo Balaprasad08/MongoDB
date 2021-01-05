@@ -1,0 +1,33 @@
+//  Searching for data in MongoDB
+
+// this query will return all the objects with Rating equal to 4.5
+use prasadkart
+db.items.find({Rating:4.5})
+
+// this query will return all the objects with Rating gteatherthan or equal to 4.1
+db.items.find({Rating:{$gte:4.1}})
+
+// this query will return all the objects with Rating gteatherthan  4.1
+db.items.find({Rating:{$gt:4.1}})
+
+// And Operator
+
+// this query will return all the objects with Rating gteatherthan  4.1 And rice greatherthan 16000
+db.items.find({Rating:{$gt:4.1},Price:{$gt:16000}})
+
+// this query will return all the objects with Rating Lessthan or equal to 3.1, And Price Lessthan 170000
+db.items.find({Rating:{$lt:3.1},Price:{$lt:170000}})
+
+// OR operator
+db.items.find({$or:[{Rating:{$gt:4.2}},{Price:{$lt:15499}}]})
+
+// Show Only Rating & Qty
+db.items.find({Rating:{$gt:4.1}},{Rating:1})
+db.items.find({Rating:{$gt:4.1}},{Rating:1,Qty:1})
+
+
+db.items.find({Price:16999})
+db.items.insertMany([{Name:'Apple',Price:16999,Rating:2.1,Qty:98,Sold:10},
+{Name:'Apple',Price:16999,Rating:2.1,Qty:98,Sold:10},
+{Name:'Apple',Price:16999,Rating:2.1,Qty:98,Sold:10},
+{Name:'Apple',Price:16999,Rating:2.1,Qty:98,Sold:10}])

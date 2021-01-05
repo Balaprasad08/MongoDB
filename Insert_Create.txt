@@ -1,0 +1,11 @@
+// Inserting Data in MongoDB
+// insert Single Document
+use prasadkart
+db.items.insertOne({ Name: 'Galaxy F41', Price: 15499, Rating: 4.5, Qty: 233, Sold: 103 })
+
+// insert Multiple Document
+db.items.insertMany([{ Name: 'Galaxy F41', Price: 15499, Rating: 4.5, Qty: 233, Sold: 103 },
+{ Name: 'Samsung Galaxy M31s', Price: 19499, Rating: 4.7, Qty: 419, Sold: 200 },
+ { Name: 'OPPO A15s', Price: 11490, Rating: 4.2, Qty: 133, Sold: 63 },
+ {Name:'Redmi 8A',Price:6999,Rating:4.1,Qty:231,Sold:79},
+ {Name:'Apple',Price:169999,Rating:2.1,Qty:98,Sold:10}])
